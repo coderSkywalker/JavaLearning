@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.marek.java.podstawy</groupId>
+  <artifactId>programowanie-w-javie-rozdz-15-NIO</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>operacje wejścia/wyjścia na strumieniach, operacje na plikach</description>
+
+	<dependencyManagement>
+  	<dependencies>
+  
+  		<!-- https://mvnrepository.com/artifact/com.oracle.java/jre -->
+		<!-- dependency>
+		    <groupId>com.oracle.java</groupId>
+		    <artifactId>jre</artifactId>
+		    <version>1.8.0_131</version>
+		</dependency -->
+		
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<dependency>
+	    	<groupId>javax.xml.bind</groupId>
+		    <artifactId>jaxb-api</artifactId>
+		    <version>2.3.0-b170201.1204</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+		<dependency>
+		    <groupId>javax.activation</groupId>
+		    <artifactId>activation</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
+		
+  		<dependency>
+		    <groupId>org.eclipse.persistence</groupId>
+		    <artifactId>org.eclipse.persistence.moxy</artifactId>
+		    <version>2.7.3</version>
+		    <scope>runtime</scope>
+		</dependency>
+  
+  	</dependencies>
+  </dependencyManagement>
+  <properties>
+	  <maven.compiler.target>1.8</maven.compiler.target>
+	  <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+
+
+
+
+</project>

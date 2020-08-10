@@ -1,0 +1,19 @@
+package com.java.concurrency.in.practice.chapter.one;
+
+public class ThreadSafeClass {
+	
+	private ThreadSafeClass instance = null;
+	
+	private ThreadSafeClass() {
+		
+	}
+	
+	public ThreadSafeClass getInstance() {
+		if ( instance == null ) {
+			instance = new ThreadSafeClass();
+		}
+		
+		return instance;
+	}
+
+}

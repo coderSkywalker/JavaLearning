@@ -1,0 +1,16 @@
+package com.thread.one;
+
+public class Boot {
+
+	public static void main( String[] args ) {
+		System.out.println( "welcome from main thread");
+		
+		Thread anotherThread = new AnotherThread();
+		anotherThread.start();
+		
+		System.out.println( "hello again from main thread" );
+		
+		
+	}
+	
+}

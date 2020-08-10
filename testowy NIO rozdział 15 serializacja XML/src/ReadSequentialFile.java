@@ -1,0 +1,43 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import javax.xml.bind.JAXB;
+
+import com.marek.Account;
+
+public class ReadSequentialFile {
+	
+	private static final String COLUMN_1 = "Nr konta";
+	private static final String COLUMN_2 = "imiê";
+	private static final String COLUMN_3 = "nazwisko";
+	private static final String COLUMN_4 = "stan konta";
+	
+	
+	public static void main( String[] args ) {
+		
+		
+		try ( BufferedReader input = Files.newBufferedReader( 
+				Paths.get("C:\\Users\\michcmar\\Documents\\My Received Files\\nowyFolder\\MakeDirectoryAndFile\\clients.xml"))) {
+			
+			Accounts accounts = JAXB.unmarshal( input, Accounts.class );
+			
+			System.out.printf( "%-26s%-12s%-16s%-10s%n", COLUMN_1, COLUMN_2, COLUMN_3, COLUMN_4);
+			
+			for ( Account account : accounts.getAccounts() ) {
+				System.out.printf( "%-26s%-12s%-16s%10.2f%n", account.getAccountNumber(),
+															  account.getFirstName(),
+															  account.getLastName(),
+															  account.getBalance());
+				
+			}
+			
+			
+			
+		}catch ( IOException ioe ) {
+			System.err.println( "B³¹d otwarcia pliku. Przerywam program.");
+		}
+	}
+
+}

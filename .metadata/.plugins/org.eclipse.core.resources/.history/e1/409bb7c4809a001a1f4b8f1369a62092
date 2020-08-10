@@ -1,0 +1,15 @@
+package com.marek.rozdzial.concurrent;
+
+public class SharedArrayTest {
+	
+	public static void main( String[] args ) {
+		
+		SimpleArray sharedSimpleArray = new SimpleArray(6);
+		
+		ArrayWriter writer1 = new ArrayWriter( 1, sharedSimpleArray );
+		ArrayWriter writer2 = new ArrayWriter( 2, sharedSimpleArray );
+		
+		
+		
+	}
+}

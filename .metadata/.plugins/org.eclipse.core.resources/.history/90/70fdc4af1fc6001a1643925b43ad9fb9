@@ -1,0 +1,32 @@
+package com.thread.one;
+
+public class Boot {
+
+	public static void main( String[] args ) {
+		System.out.println( "welcome from main thread");
+		
+		Thread anotherThread = new AnotherThread();
+		anotherThread.start();
+		
+		new Thread() {
+			public void run() {
+				System.out.println( "hello from anonymous class thread");
+			}
+		}.start();
+		
+		Thread myRunnableThread = new Thread( new MyRunnable() );
+		myRunnableThread.start();
+		
+		Thread myRunnableThreadAnonymous  = new Thread( new MyRunnable() {
+			public void run() {
+				System.out.println( "hello from anonymous MyRunnable" );
+			}
+		});
+		myRunnableThreadAnonymous.start();
+		
+		System.out.println( "hello again from main thread" );
+		
+		
+	}
+	
+}

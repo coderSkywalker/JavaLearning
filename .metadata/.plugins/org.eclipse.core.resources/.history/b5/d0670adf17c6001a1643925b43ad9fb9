@@ -1,0 +1,7 @@
+package com.thread.one;
+
+public class AnotherThread extends Thread {
+	
+	
+
+}

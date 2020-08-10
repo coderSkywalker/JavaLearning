@@ -1,0 +1,19 @@
+package com.marek.rozdzial.concurrent;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
+public class Boot {
+	
+	public static void main( String[] args ) {
+		PrintTask task = new PrintTask( "alibaaba" );
+		task.run();
+		
+		PrintTask taskDrugi = new PrintTask( "dartagnian" );
+		PrintTask taskTrzeci = new PrintTask( "atos" );
+		PrintTask taskCzwarty = new PrintTask( "portos" );
+		
+		
+	}
+
+}

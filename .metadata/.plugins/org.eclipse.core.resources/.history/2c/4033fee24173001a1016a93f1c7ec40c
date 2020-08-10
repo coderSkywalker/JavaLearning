@@ -1,0 +1,18 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class ReadSequentialFile {
+	
+	public static void main( String[] args ) {
+		
+		
+		try ( BufferedReader input = Files.newBufferedReader( Paths.get("C:\\\\Users\\\\michcmar\\\\Documents\\\\My Received Files\\\\nowyFolder\\\\MakeDirectoryAndFile\\\\clients.xml"))) {
+			
+		}catch ( IOException ioe ) {
+			
+		}
+	}
+
+}

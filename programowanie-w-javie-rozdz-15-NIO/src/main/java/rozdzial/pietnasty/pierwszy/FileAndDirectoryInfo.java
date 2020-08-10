@@ -1,0 +1,108 @@
+package rozdzial.pietnasty.pierwszy;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
+public class FileAndDirectoryInfo {
+	
+	/**
+	 * Java radzi sobie z dowolnym separatorem œcie¿ki dostêpu ( "/" lub "\" )
+	 * Gdy budujemy litera³, nale¿y u¿yæ File.separator, który pobiera separator
+	 * dla danego systemu operacyjnego.
+	 */
+	private static final String SEPARATOR = File.separator;
+
+	public static void getFileAndDirectoryInfo() throws IOException {
+		
+		Scanner scaner = new Scanner( System.in );
+		
+		System.out.println("Podaj nazwê pliku lub folderu:");
+		
+		// Utwórz obiekt Path na podstawie informacji od u¿ytkownika
+		Path path = Paths.get( scaner.nextLine() );
+		
+		if ( Files.exists(path)) { // Jeœli œcie¿ka istnieje, wyœwietla informacje o niej
+			
+			//Sprawdza czy jak nazywa siê ostatni element œcie¿ki
+			System.out.printf("%n%s istnieje%n", path.getFileName());
+			// Sprawdza czy ostatni element œcie¿ki jest folderem 
+			System.out.printf("%s folderem%n", 
+					Files.isDirectory(path) ? "Jest" : "Nie jest");
+			System.out.printf("%s œcie¿k¹ bezwzglêdn¹%n",
+					path.isAbsolute() ? "Jest" : "Nie jest");
+			System.out.printf("Ostatnia modyfikacja: %s%n",
+					Files.getLastModifiedTime(path));
+			System.out.printf("Rozmiar pliku: %s%n", Files.size(path) );
+			System.out.printf("Œcie¿ka: %s%n", path );
+			System.out.printf("Œcie¿ka bezwzglêdna: %s%n", path.toAbsolutePath());
+			
+			// ten blok wyœwietla zawartoœæ folderu
+			if ( Files.isDirectory(path) ) {
+//				
+//				System.out.printf("%nZawartoœæ folderu:%n");
+//				
+//				
+//				DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path);
+//				
+//				for ( Path p : directoryStream ) {
+//					System.out.println(p);
+//				}
+			
+				displayContentDirectory(path);
+				
+			}else {
+				System.out.printf("%nNie da siê wyœwietliæ zawartoœci folderu w podanej œcie¿ce dostêpu");
+				System.out.printf("%n%s jest plikiem a nie katalogiem", path.getFileName());
+			}
+			
+			
+		}else {
+			System.out.printf("%nPodana œcie¿ka jest b³êdna. Nie istnieje katalog ani plik o podanej nazwie" );
+		}
+				
+	}
+	
+	
+	private static void displayContentDirectory( Path path ) throws IOException {
+		
+		if ( Files.isDirectory(path)) {
+			System.out.printf( "%nZawartoœæ folderu:%n" );
+		
+		
+			DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path);
+		
+			for ( Path p : directoryStream ) {
+				
+				if ( Files.isDirectory(p) ) displayContentDirectory( p );
+				
+				System.out.println(p);
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

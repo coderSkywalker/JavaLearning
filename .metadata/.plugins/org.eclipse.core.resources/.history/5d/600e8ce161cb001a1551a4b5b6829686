@@ -1,0 +1,9 @@
+package com.java.concurrency.in.practice.chapter.one;
+
+public class Boot {
+	
+	public static void main( String[] args ) {
+		
+	}
+
+}

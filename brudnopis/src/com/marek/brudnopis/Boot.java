@@ -1,0 +1,37 @@
+package com.marek.brudnopis;
+
+import java.security.SecureRandom;
+
+public class Boot implements Runnable {
+	
+	private final int sleepTime;
+	private static final SecureRandom generator = new SecureRandom();
+	private final String nameThread;
+	
+	public Boot( String nameThread ) {
+		
+		this.nameThread = nameThread;
+		
+		sleepTime = generator.nextInt( 7000 );
+	}
+	
+	public static void main( String[] args ) {
+		
+		
+		Boot taskOne = new Boot( "Alebaba" );
+		Boot taskTwo = new Boot( "Babajaga" );
+		Boot taskThree = new Boot( "BabaYoga" );
+		
+		PrintTask printTask1 = new PrintTask( "gajda");
+		
+		
+	}
+
+	@Override
+	public void run() {
+		
+		
+		
+	}
+
+}

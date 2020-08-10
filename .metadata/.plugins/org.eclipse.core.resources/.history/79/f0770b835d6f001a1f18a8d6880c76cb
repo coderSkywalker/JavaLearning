@@ -1,0 +1,11 @@
+package rozdzial.pietnasty.studiumprzypadku.firstcopy;
+
+public class CreditInquiry {
+	
+	public static void main( String[] args ) {
+		
+		
+		
+	}
+
+}

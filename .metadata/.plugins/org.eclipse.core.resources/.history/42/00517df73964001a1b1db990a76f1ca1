@@ -1,0 +1,31 @@
+
+public class Basics< T, K > {
+	
+	private T name;
+	private K age;
+	
+	public Basics( T name, K age ) {
+		this.name = name;
+		this.age = age;
+	}
+	
+
+	public T getName() {
+		return name;
+	}
+
+	public void setName(T name) {
+		this.name = name;
+	}
+
+	public K getAge() {
+		return age;
+	}
+
+	public void setAge(K age) {
+		this.age = age;
+	}
+	
+	
+
+}

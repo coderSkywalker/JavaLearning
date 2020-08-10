@@ -1,0 +1,12 @@
+package com.marek.rozdzial.concurrent;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
+public class Boot {
+	
+	public static void main( String[] args ) {
+		Executor tralalala = Executors.newSingleThreadExecutor();
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class Boot {
+
+	public static void main( String[] args ) {
+		Basics< String, Integer > klasa = new Basics<>( "Marcin", 23);
+		Basics< String, Double > klasaNowa = new Basics<>( "Jan", 30.0 );
+		System.out.println( klasa.getName() + " " + klasa.getAge() + " " + klasaNowa.getName() + " " + klasa.getAge());
+	}
+	
+}

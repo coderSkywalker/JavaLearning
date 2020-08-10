@@ -1,0 +1,31 @@
+
+public class Basics< T, K > {
+	
+	private T firstVariable;
+	private K secondVariable;
+	
+	public Basics( T name, K age ) {
+		this.firstVariable = name;
+		this.secondVariable = age;
+	}
+	
+
+	public T getName() {
+		return firstVariable;
+	}
+
+	public void setName(T name) {
+		this.firstVariable = name;
+	}
+
+	public K getAge() {
+		return secondVariable;
+	}
+
+	public void setAge(K age) {
+		this.secondVariable = age;
+	}
+	
+	
+
+}

@@ -1,0 +1,12 @@
+package com.marek.rozdzial.concurrent;
+
+public class SharedArrayTest {
+	
+	public static void main( String[] args ) {
+		
+		SimpleArray sharedSimpleArray = new SimpleArray(6);
+		
+		
+		
+	}
+}

@@ -1,0 +1,13 @@
+package com.marek.rozdzial.concurrent;
+
+public class ArrayWriter implements Runnable {
+	
+	
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

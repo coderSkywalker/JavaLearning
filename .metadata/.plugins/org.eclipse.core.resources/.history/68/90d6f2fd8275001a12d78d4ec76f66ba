@@ -1,0 +1,48 @@
+package com.marek.rozdzial.concurrent;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Boot {
+	
+	public static void main( String[] args ) {
+		PrintTask task = new PrintTask( "alibaaba" );
+		task.run();
+		
+		PrintTask taskDrugi = new PrintTask( "dartagnian" );
+		PrintTask taskTrzeci = new PrintTask( "atos" );
+		PrintTask taskCzwarty = new PrintTask( "portos" );
+		
+		System.out.println( "Uruchamianie wykonawcy zadañ" );
+		
+		//Utworzenie ExecutorService do zarz¹dzania zadaniami
+		ExecutorService executorService = Executors.newCachedThreadPool();
+		
+		//wykonaj trzy zadania PrintTask
+		executorService.execute( taskDrugi );
+		executorService.execute( taskTrzeci );
+		executorService.execute( taskCzwarty );
+		
+		// wy³¹cz ExecutorService - on sam zdecyduje, kiedy wy³¹czyæ w¹tki
+		executorService.shutdown();
+		
+		
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

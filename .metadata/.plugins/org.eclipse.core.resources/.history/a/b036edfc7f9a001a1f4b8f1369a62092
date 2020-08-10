@@ -1,0 +1,8 @@
+package com.marek.rozdzial.concurrent;
+
+public class SharedArrayTest {
+	
+	public static void main( String[] args ) {
+		
+	}
+}

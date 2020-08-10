@@ -1,0 +1,20 @@
+package com.marek.rozdzial.concurrent;
+
+import java.security.SecureRandom;
+
+public class SimpleArray {
+	
+	private static final SecureRandom generator = new SecureRandom();
+	private final int[] array;
+	private int writeIndex;
+
+	
+	public SimpleArray( int size ) {
+		array = new int[ size ];
+	}
+	
+	
+	
+	
+
+}

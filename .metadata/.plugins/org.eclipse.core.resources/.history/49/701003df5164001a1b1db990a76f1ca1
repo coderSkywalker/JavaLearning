@@ -1,0 +1,12 @@
+
+public class FirstNameLastName {
+	
+	private String firstName;
+	private String lastName;
+	
+	public FirstNameLastName( Basics< String, String> basics ) {
+		firstName = basics.getFirstVariable();
+		lastName = basics.getSecondVariable();
+	}
+
+}

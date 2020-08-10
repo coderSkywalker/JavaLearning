@@ -1,0 +1,22 @@
+
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlElement;
+
+import com.marek.Account;
+
+
+public class Accounts {
+	
+	@XmlElement(name="account")
+	private List<Account> accounts = new ArrayList<>();
+	
+	@XmlElement()
+	private int liczba = 1;
+
+	public List<Account> getAccounts() {
+		return accounts;
+	}
+	
+}

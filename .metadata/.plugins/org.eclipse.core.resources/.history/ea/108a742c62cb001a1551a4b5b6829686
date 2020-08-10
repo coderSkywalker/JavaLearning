@@ -1,0 +1,17 @@
+package com.java.concurrency.in.practice.chapter.one;
+
+public class Boot {
+	
+	public static void main( String[] args ) {
+		
+		ThreadSafeClass classOne = new ThreadSafeClass();
+		
+		new Thread() {
+			public void run() {
+				classOne.serviceSelf();
+				System.out.println( classOne.getCouterValue());
+			}
+		}.start();
+	}
+
+}

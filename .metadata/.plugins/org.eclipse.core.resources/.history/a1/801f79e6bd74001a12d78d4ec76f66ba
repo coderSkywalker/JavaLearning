@@ -1,0 +1,5 @@
+package com.marek.rozdzial.concurrent;
+
+public class PrintTask {
+
+}

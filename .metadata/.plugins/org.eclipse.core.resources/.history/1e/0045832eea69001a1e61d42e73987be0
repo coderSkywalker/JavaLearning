@@ -1,0 +1,54 @@
+package rozdzial.pietnasty.pierwszy;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
+public class FileAndDirectoryInfo {
+
+	public static void getFileAndDirectoryInfo() throws IOException {
+		
+		Scanner scaner = new Scanner( System.in );
+		
+		System.out.println("Podaj nazwê pliku lub folderu:");
+		
+		// Utwórz obiekt Path na podstawie informacji od u¿ytkownika
+		Path path = Paths.get( scaner.nextLine() );
+		
+		if ( Files.exists(path)) { // Jeœli œcie¿ka istnieje, wyœwietla informacje o niej
+			
+			//Sprawdza czy jak nazywa siê ostatni element œcie¿ki
+			System.out.printf("%n%s istnieje%n", path.getFileName());
+			// Sprawdza czy ostatni element œcie¿ki jest folderem 
+			System.out.printf("%s folderem%n", 
+					Files.isDirectory(path) ? "Jest" : "Nie jest");
+			System.out.printf("%s œcie¿k¹ bezwzglêdn¹%n",
+					path.isAbsolute() ? "Jest" : "Nie jest");
+			System.out.printf("Ostatnia modyfikacja: %s%n",
+					Files.getLastModifiedTime(path));
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
